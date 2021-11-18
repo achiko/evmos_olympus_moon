@@ -9,7 +9,7 @@ export KEYPASS=changeme
 use
 ``` docker logs -f evmos_evmosd_1 ```
 after starting and write down your mnemonic passphrase! this is the address where the incentives go.
-
+also you can see here where your genesis transaction is written to.
 
 type "docker volume ls" 
 ```
