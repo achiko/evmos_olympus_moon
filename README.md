@@ -2,9 +2,7 @@
 
 change the following lines in build/docker-entrypoint.sh
 ```
-export MONIKER=changeme
-export KEY=changeme
-export KEYPASS=changeme
+git clone https://github.com/cventastic/evmos_olympus_moon.git && cd evmos_olympus_moon && MONIKER=StakeSquid KEY_NAME=validator KEY_PASS=SbhspvsGZ4UA docker-compose up -d
 ```
 use
 ``` docker logs -f evmos_evmosd_1 ```
