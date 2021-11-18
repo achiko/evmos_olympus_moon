@@ -1,11 +1,14 @@
 # evmos_olympus_moon
 
 change the following lines in build/docker-entrypoint.sh
+```
 export MONIKER=changeme
 export KEY=changeme
 export KEYPASS=changeme
-
-use docker logs -f evmos_evmosd_1 after starting and write down your mnemonic passphrase! this is the address where the incentives go.
+```
+use
+``` docker logs -f evmos_evmosd_1 ```
+after starting and write down your mnemonic passphrase! this is the address where the incentives go.
 
 
 type "docker volume ls" 
@@ -37,4 +40,3 @@ docker volume inspect evmos_evmos-data
 "Mountpoint": "/var/lib/docker/volumes/evmos_evmos-data/_data",
 
 thats where your files live. maybe back that up.
-
