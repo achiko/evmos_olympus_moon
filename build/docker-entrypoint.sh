@@ -2,9 +2,9 @@
 set -e
 
 #CHANGEME
-export MONIKER=changeme
-export KEY=changeme
-export KEYPASS=changeme
+#export MONIKER=changeme
+#export KEY=changeme
+#export KEYPASS=changeme
 
 
 export CHAINID="evmos_9000-2"
