@@ -14,6 +14,10 @@ services:
       - "26657/tcp"
       - "26657/udp"
       - "26660/tcp"
+    environment:
+      - MONIKER=${MONIKER}
+      - KEY=${KEY_NAME}
+      - KEYPASS=${KEY_PASS}
     ports:
       - 127.0.0.1:26657:26657/tcp
       - 127.0.0.1:26657:26657/udp
