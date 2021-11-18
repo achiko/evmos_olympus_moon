@@ -1,0 +1,25 @@
+version: "3.4"
+
+services:
+  evmosd:
+    build:
+      context: ./build
+      dockerfile: Dockerfile
+    image: evmos:local
+    restart: unless-stopped
+    stop_grace_period: 1m
+    volumes:
+      - evmos-data:/root/.evmosd
+    expose:
+      - "26657/tcp"
+      - "26657/udp"
+      - "26660/tcp"
+    ports:
+      - 127.0.0.1:26657:26657/tcp
+      - 127.0.0.1:26657:26657/udp
+      - 127.0.0.1:26660:26660/tcp
+    entrypoint: [ "/root/entrypoint.sh" ]
+
+volumes:
+  evmos-data:
+
